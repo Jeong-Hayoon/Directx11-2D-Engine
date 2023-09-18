@@ -24,6 +24,7 @@
     <ProjectGuid>{8d1c292d-2794-48f6-8278-e2adeb5589c0}</ProjectGuid>
     <RootNamespace>YamYamEngineWindows</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <ProjectName>Directx11_2D_Engine_Windows</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,6 +141,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Update="C:\Users\hayn0\OneDrive\바탕 화면\Local Repository\Directx11-2D-Engine\YamYamEngine_SOURCE\hyMath.inl">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

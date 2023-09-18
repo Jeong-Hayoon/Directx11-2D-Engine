@@ -1,150 +1,156 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaApplication.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyApplication.cpp">
       <Filter>Engine\High Level Interface</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaGraphicsDevice_DX11.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyGraphicsDevice_DX11.cpp">
       <Filter>Engine\Graphics\API</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaEntity.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyEntity.cpp">
       <Filter>Engine\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaInput.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyInput.cpp">
       <Filter>Engine\Helpers\Input</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaMath.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyMath.cpp">
       <Filter>Engine\Helpers\Mathatics</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaTime.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyTime.cpp">
       <Filter>Engine\Helpers\Time</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaResources.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyResources.cpp">
       <Filter>Engine\Resource\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaResource.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyResource.cpp">
       <Filter>Engine\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaMaterial.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyMaterial.cpp">
       <Filter>Engine\High Level Interface</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaRenderer.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyRenderer.cpp">
       <Filter>Engine\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaShader.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyShader.cpp">
       <Filter>Engine\Resource\Shader</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaMesh.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyMesh.cpp">
       <Filter>Engine\Resource\Mesh</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaScene.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyScene.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaSceneManager.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hySceneManager.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaLayer.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyLayer.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaGameObject.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyGameObject.cpp">
       <Filter>Engine\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaConstantBuffer.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyConstantBuffer.cpp">
       <Filter>Engine\Resource\Shader</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaComponent.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyComponent.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaTransform.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyTransform.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaMeshRenderer.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyMeshRenderer.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)yaBullet.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyBullet.cpp">
+      <Filter>Contents\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyPlayer.cpp">
       <Filter>Contents\GameObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaApplication.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyApplication.h">
       <Filter>Engine\High Level Interface</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaGraphicsDevice_DX11.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGraphicsDevice_DX11.h">
       <Filter>Engine\Graphics\API</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaGraphicsDevice.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGraphicsDevice.h">
       <Filter>Engine\Graphics\API</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaGraphics.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGraphics.h">
       <Filter>Engine\Graphics\API</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)YamYamEngine.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)Directx11_2D_Engine.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaEntity.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyEntity.h">
       <Filter>Engine\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaInput.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyInput.h">
       <Filter>Engine\Helpers\Input</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaMath.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyMath.h">
       <Filter>Engine\Helpers\Mathatics</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaTime.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyTime.h">
       <Filter>Engine\Helpers\Time</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaResources.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyResources.h">
       <Filter>Engine\Resource\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaResource.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyResource.h">
       <Filter>Engine\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaCanvas.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyCanvas.h">
       <Filter>Engine\System</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaMaterial.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyMaterial.h">
       <Filter>Engine\High Level Interface</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaEnums.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyEnums.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaRenderer.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyRenderer.h">
       <Filter>Engine\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaShader.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyShader.h">
       <Filter>Engine\Resource\Shader</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaMesh.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyMesh.h">
       <Filter>Engine\Resource\Mesh</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaScene.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyScene.h">
       <Filter>Engine\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaSceneManager.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hySceneManager.h">
       <Filter>Engine\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaLayer.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyLayer.h">
       <Filter>Engine\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaGameObject.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGameObject.h">
       <Filter>Engine\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaConstantBuffer.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyConstantBuffer.h">
       <Filter>Engine\Resource\Shader</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaComponent.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyComponent.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaTransform.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyTransform.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaMeshRenderer.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyMeshRenderer.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)yaBullet.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyBullet.h">
+      <Filter>Contents\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyPlayer.h">
       <Filter>Contents\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
@@ -208,7 +214,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)yaMath.inl">
+    <None Include="$(MSBuildThisFileDirectory)hyMath.inl">
       <Filter>Engine\Helpers\Mathatics</Filter>
     </None>
   </ItemGroup>
