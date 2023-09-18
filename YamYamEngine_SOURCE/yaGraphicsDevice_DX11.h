@@ -43,6 +43,7 @@ namespace ya::graphics
 		void Render();
 
 	private:
+		// ComPtr - 자동으로 메모리 해제를 진행해줌(따로 해줄 필요 없음)
 		Microsoft::WRL::ComPtr<ID3D11Device>			mDevice;
 		Microsoft::WRL::ComPtr<ID3D11DeviceContext>		mContext;
 		Microsoft::WRL::ComPtr<ID3D11Texture2D>			mFrameBuffer;
@@ -53,7 +54,7 @@ namespace ya::graphics
 		Microsoft::WRL::ComPtr<ID3D11SamplerState>		mSamplers[(UINT)Filter::MAXIMUM_ANISOTROPIC];
 	};
 
-	// This is a helper to get access to a global device instance
+	//	- This is a helper to get access to a global device instance
 	//	- The engine uses this, but it is not necessary to use a single global device object
 	//	- This is not a lifetime managing object, just a way to globally expose a reference to an object by pointer
 	inline GraphicsDevice_DX11*& GetDevice()

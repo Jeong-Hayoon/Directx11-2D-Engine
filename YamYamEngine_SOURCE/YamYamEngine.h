@@ -5,5 +5,4 @@
 #include <set>
 #include <filesystem>
 
-
 #include "yaMath.h"

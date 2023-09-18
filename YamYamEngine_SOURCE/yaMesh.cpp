@@ -3,6 +3,7 @@
 
 namespace ya
 {
+    // Mesh : 정점과 정점이 이어지는 순서가 저장되어 있는 것
     Mesh::Mesh()
     {
     }
@@ -74,6 +75,7 @@ namespace ya
         // Set Inputlayout, shader
         //renderer::shader->Update();
 
+        // DrawIndexed - Draw와 같지만 인덱스를 사용하여 Draw
         GetDevice()->DrawIndexed(mIndexCount, 0, 0);
     }
 }

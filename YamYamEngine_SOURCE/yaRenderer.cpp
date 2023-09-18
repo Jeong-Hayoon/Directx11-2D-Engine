@@ -23,19 +23,19 @@ namespace ya::renderer
 	{
 		std::vector<Vertex> vertexes;
 		vertexes.resize(3);
-		vertexes[0].pos = Vector3(0.f, 0.5f, 0.f);
+		vertexes[0].pos = Vector3(0.f, 0.1f, 0.f);
 		vertexes[0].color = Vector4(0.f, 1.f, 0.f, 1.f);
 
-		vertexes[1].pos = Vector3(0.5f, -0.5f, 0.f);
+		vertexes[1].pos = Vector3(0.1f, -0.1f, 0.f);
 		vertexes[1].color = Vector4(1.f, 0.f, 0.f, 1.f);
 
-		vertexes[2].pos = Vector3(-0.5f, -0.5f, 0.f);
+		vertexes[2].pos = Vector3(-0.1f, -0.1f, 0.f);
 		vertexes[2].color = Vector4(0.f, 0.f, 1.f, 1.f);
 
 		std::vector<UINT> indexes;
-		indexes.push_back(0);
-		indexes.push_back(2);
-		indexes.push_back(3);
+		//indexes.push_back(0);
+		//indexes.push_back(2);
+		//indexes.push_back(3);
 
 		indexes.push_back(0);
 		indexes.push_back(1);
@@ -59,7 +59,7 @@ namespace ya::renderer
 		Resources::Insert(L"TriangleShader", shader);
 		//GetDevice()->CreateShader(ShaderStage::NONE);
 		//GetDevice()->CreateVertexShader();`
-				// Input layout 정점 구조 정보
+		// Input layout 정점 구조 정보
 		InputLayouts[0].AlignedByteOffset = 0;
 		InputLayouts[0].Format = DXGI_FORMAT_R32G32B32_FLOAT;
 		InputLayouts[0].InputSlot = 0;

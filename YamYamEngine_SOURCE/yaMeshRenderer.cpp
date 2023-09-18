@@ -4,6 +4,7 @@
 
 namespace ya
 {
+	// SpriteRenderer와 같지만 Mesh를 가지고 Render
 	MeshRenderer::MeshRenderer()
 		: Component(COMPONENTTYPE::MESH)
 	{

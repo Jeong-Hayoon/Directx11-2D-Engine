@@ -1,5 +1,7 @@
 #pragma once
 #include "yaScene.h"
+#include "yaGameObject.h"
+#include "yaTransform.h"
 
 namespace ya
 {
@@ -11,7 +13,12 @@ namespace ya
 		static void FixedUpdate();
 		static void Render();
 
+		static Scene* GetAciveScene() { return mActiveScene; }
+
 	private:
+		static Scene* mActiveScene;
 		static Scene* mPlayScene;
+		static GameObject* object;
+		static Transform* tr;
 	};
 }

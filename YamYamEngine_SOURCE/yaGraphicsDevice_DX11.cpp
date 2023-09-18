@@ -37,7 +37,10 @@ namespace ya::graphics
         swapChainDesc.BufferDesc.Width = application.GetWidth();
         swapChainDesc.BufferDesc.Height = application.GetHeight();
         swapChainDesc.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+        // 모니터 해상도 
+        // Numerator - 분자
         swapChainDesc.BufferDesc.RefreshRate.Numerator = 144;
+        // Denominator - 분모
         swapChainDesc.BufferDesc.RefreshRate.Denominator = 1;
         swapChainDesc.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;
         swapChainDesc.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
@@ -60,7 +63,7 @@ namespace ya::graphics
         D3D11_TEXTURE2D_DESC texdesc = {};
 
         texdesc.BindFlags = D3D11_BIND_FLAG::D3D11_BIND_DEPTH_STENCIL;
-
+        
         texdesc.Usage = D3D11_USAGE::D3D11_USAGE_DEFAULT;
         texdesc.CPUAccessFlags = 0;
 

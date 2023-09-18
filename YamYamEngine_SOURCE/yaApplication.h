@@ -36,6 +36,8 @@ namespace ya
 
 	private:
 		bool initialized = false;
+		// unique_ptr- 메모리 해제를 따로 해주지 않아도 메모리 해제가 자동으로 일어남
+		// unique의 의미대로 객체는 한 개 밖에 만들지 못함
 		std::unique_ptr<ya::graphics::GraphicsDevice_DX11> graphicsDevice;
 
 		HWND mHwnd;

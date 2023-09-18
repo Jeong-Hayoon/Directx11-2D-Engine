@@ -61,6 +61,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)yaMeshRenderer.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)yaBullet.cpp">
+      <Filter>Contents\GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)yaApplication.h">
@@ -141,6 +144,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)yaMeshRenderer.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)yaBullet.h">
+      <Filter>Contents\GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -193,6 +199,12 @@
     </Filter>
     <Filter Include="Engine\Component">
       <UniqueIdentifier>{bd404344-8200-434d-9075-871fa03ca54c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{d259bf75-3912-4fe7-adfb-30b9ecb51f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\GameObject">
+      <UniqueIdentifier>{3b2860a7-6332-471b-aa0a-55d02c10cecc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

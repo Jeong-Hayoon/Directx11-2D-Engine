@@ -22,6 +22,7 @@ namespace ya
 		void SetMesh(Mesh* mesh) { mMesh = mesh; }
 		void SetShader(Shader* shader) { mShader = shader; }
 
+
 	private:
 		Mesh* mMesh;
 		Shader* mShader;
