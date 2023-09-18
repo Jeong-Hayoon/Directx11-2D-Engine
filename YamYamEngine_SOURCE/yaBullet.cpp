@@ -2,38 +2,39 @@
 #include "yaResources.h"
 #include "yaMeshRenderer.h"
 #include "yaSceneManager.h"
-
-
+#include "yaTime.h"
 
 namespace ya
 {
+	GameObject* Bullet :: object = nullptr;
+
+
 	Bullet::Bullet()
 	{
+		
 	}
 	Bullet::~Bullet()
 	{
 	}
 	void Bullet::Initialize()
-	{
-		object = new GameObject();
-		tr = new Transform();
-		tr->SetPosition(Vector3(0.f, -0.5f, 0.0f));
-		object->AddComponent(tr);
-
-		MeshRenderer* meshRenderer = new MeshRenderer();
-		meshRenderer->SetMesh(Resources::Find<Mesh>(L"TriangleMesh"));
-		meshRenderer->SetShader(Resources::Find<Shader>(L"TriangleShader"));
-		object->AddComponent(meshRenderer);
-
-		SceneManager::GetAciveScene()->AddGameObject(object, LAYER::NONE);
+	{	
+		GameObject::Initialize();
 	}
 	void Bullet::Update()
 	{
+		tr = GetComponent<Transform>();
+		Vector3 pos = tr->GetPosition();
+		pos.y += 1.f * Time::DeltaTime();
+		tr->SetPosition(pos);
+
+		GameObject::Update();
 	}
 	void Bullet::FixedUpdate()
 	{
+		GameObject::FixedUpdate();
 	}
 	void Bullet::Render()
 	{
+		GameObject::Render();
 	}
 }

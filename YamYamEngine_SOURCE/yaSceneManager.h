@@ -14,6 +14,7 @@ namespace ya
 		static void Render();
 
 		static Scene* GetAciveScene() { return mActiveScene; }
+		static Transform* GetPosition() { return tr; }
 
 	private:
 		static Scene* mActiveScene;

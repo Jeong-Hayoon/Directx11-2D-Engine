@@ -6,6 +6,8 @@
 #include "yaTransform.h"
 #include "yaMeshRenderer.h"
 #include "yaInput.h"
+#include "yaBullet.h"
+
 
 namespace ya
 {
@@ -71,15 +73,33 @@ namespace ya
 		}
 		if (Input::GetKeyDown(KEY_CODE::SPACE))
 		{
-			// 醚舅 按眉 积己窍绰 内靛
+			Bullet* bullet = new Bullet();
+			Transform* bullettr = new Transform();
+			Vector3 playerpos = object->GetComponent<Transform>()->GetPosition();
+			bullettr->SetPosition(Vector3(playerpos));
+			bullet->AddComponent(bullettr);
+
+			MeshRenderer* meshRenderer = new MeshRenderer();
+			meshRenderer->SetMesh(Resources::Find<Mesh>(L"TriangleMesh"));
+			meshRenderer->SetShader(Resources::Find<Shader>(L"TriangleShader"));
+			bullet->AddComponent(meshRenderer);
+
+			SceneManager::GetAciveScene()->AddGameObject(bullet, LAYER::NONE);
 		}
 		
 		tr->SetPosition(pos);
 
-		/*if (Input::GetKeyDown(KEY_CODE: C)
-		{
+		Vector3 ScalePos = tr->GetScale();
 
-		}*/
+		if (Input::GetKeyDown(KEY_CODE::C))
+		{
+			
+			ScalePos.x += 1.0f * Time::DeltaTime();
+			
+
+		}
+
+		tr->SetScale(ScalePos);
 
 	}
 

@@ -17,7 +17,7 @@ namespace ya
 
 	private:
 		static GameObject* object;
-		static Transform* tr;
+		 Transform* tr;
 	};
 }
 

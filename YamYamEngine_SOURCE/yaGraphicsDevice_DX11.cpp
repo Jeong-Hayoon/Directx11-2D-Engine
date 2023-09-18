@@ -289,7 +289,7 @@ namespace ya::graphics
         D3D11_MAPPED_SUBRESOURCE subRes = {};
         mContext->Map(buffer, 0, D3D11_MAP::D3D11_MAP_WRITE_DISCARD, 0, &subRes);
         memcpy(subRes.pData, data, size);
-        mContext->Unmap(buffer, 0);
+         mContext->Unmap(buffer, 0);
     }
 
     void GraphicsDevice_DX11::SetConstantBuffer(ShaderStage stage, CBTYPES type, ID3D11Buffer* buffer)
