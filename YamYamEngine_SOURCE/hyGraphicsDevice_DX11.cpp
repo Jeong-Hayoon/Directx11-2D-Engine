@@ -292,36 +292,36 @@ namespace hy::graphics
          mContext->Unmap(buffer, 0);
     }
 
-    void GraphicsDevice_DX11::SetConstantBuffer(ShaderStage stage, CBTYPES type, ID3D11Buffer* buffer)
+    void GraphicsDevice_DX11::SetConstantBuffer(eShaderStage stage, eCBType type, ID3D11Buffer* buffer)
     {
         switch (stage)
         {
-        case hy::graphics::ShaderStage::VS:
+        case hy::graphics::eShaderStage::VS:
             {
                 mContext->VSSetConstantBuffers((UINT)type, 1, &buffer);
             }
             break;
-        case hy::graphics::ShaderStage::HS:
+        case hy::graphics::eShaderStage::HS:
             {
                 mContext->HSSetConstantBuffers((UINT)type, 1, &buffer);
             }
             break;
-        case hy::graphics::ShaderStage::DS:
+        case hy::graphics::eShaderStage::DS:
             {
                 mContext->DSSetConstantBuffers((UINT)type, 1, &buffer);
             }
             break;
-        case hy::graphics::ShaderStage::GS:
+        case hy::graphics::eShaderStage::GS:
             {
                 mContext->GSSetConstantBuffers((UINT)type, 1, &buffer);
             }
             break;
-        case hy::graphics::ShaderStage::PS:
+        case hy::graphics::eShaderStage::PS:
             {
                 mContext->PSSetConstantBuffers((UINT)type, 1, &buffer);
             }
             break;
-        case hy::graphics::ShaderStage::CS:
+        case hy::graphics::eShaderStage::CS:
             {
                 mContext->CSSetConstantBuffers((UINT)type, 1, &buffer);
             }
@@ -367,12 +367,12 @@ namespace hy::graphics
     void GraphicsDevice_DX11::Render()
     {
         //set costant buffer 
-        renderer::constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM]->SetPipline(ShaderStage::VS);
+        renderer::constantBuffers[(UINT)graphics::eCBType::TRANSFORM]->Bind(eShaderStage::VS);
 
         //// Input Assembeler 단계에 버텍스버퍼 정보 지정
         renderer::mesh->BindBuffer();
         Vector4 pos(0.0f, 0.0f, 0.0f, 0.0f);
-        renderer::constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM]->Bind(&pos);
+        renderer::constantBuffers[(UINT)graphics::eCBType::TRANSFORM]->SetData(&pos);
 
         // Set Inputlayout, shader
         renderer::shader->Update();

@@ -12,7 +12,7 @@ namespace hy::renderer
 	D3D11_INPUT_ELEMENT_DESC InputLayouts[2];
 	Mesh* mesh = nullptr;
 	Shader* shader = nullptr;
-	ConstantBuffer* constantBuffers[(UINT)graphics::CBTYPES::END];
+	ConstantBuffer* constantBuffers[(UINT)graphics::eCBType::END];
 	
 	void SetUpStates()
 	{
@@ -47,17 +47,17 @@ namespace hy::renderer
 		Resources::Insert(L"TriangleMesh", mesh);
 		
 
-		constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM] = new ConstantBuffer();
-		constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM]->Create(sizeof(Vector4));
+		constantBuffers[(UINT)graphics::eCBType::Transform] = new ConstantBuffer();
+		constantBuffers[(UINT)graphics::eCBType::Transform]->Create(sizeof(TransformCB));
 		//mesh->CreateConstantBuffer(nullptr, sizeof(Vector4));
 	}
 
 	void LoadShader()
 	{
-		shader->Create(ShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
-		shader->Create(ShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
+		shader->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
+		shader->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
 		Resources::Insert(L"TriangleShader", shader);
-		//GetDevice()->CreateShader(ShaderStage::NONE);
+		//GetDevice()->CreateShader(eShaderStage::NONE);
 		//GetDevice()->CreateVertexShader();`
 		// Input layout 정점 구조 정보
 		InputLayouts[0].AlignedByteOffset = 0;
@@ -95,7 +95,7 @@ namespace hy::renderer
 		delete mesh;
 		delete shader;
 
-		delete constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM];
+		delete constantBuffers[(UINT)graphics::eCBType::Transform];
 		//triangleVertexBuffer->Release();
 		//errorBlob->Release();
 		//triangleVSBlob->Release();

@@ -11,10 +11,10 @@ namespace hy::graphics
 		~ConstantBuffer();
 
 		bool Create(size_t size);
-		void Bind(void* data);
-		void SetPipline(ShaderStage stage);
+		void SetData(void* data);
+		void Bind(eShaderStage stage);
 
 	private:
-		const CBTYPES mType;
+		const eCBtype mType;
 	};
 }

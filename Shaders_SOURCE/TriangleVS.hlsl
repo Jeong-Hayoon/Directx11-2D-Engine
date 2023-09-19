@@ -13,7 +13,10 @@ struct VTX_OUT
 
 cbuffer TRANSFORM : register(b0)
 {
-    float4 cbPos;
+    float3 cbPos;
+    int padd1;
+    float3 cbScale;
+    int padd2;
 };
 
 VTX_OUT VS_Test(VTX_IN _in)
@@ -23,6 +26,10 @@ VTX_OUT VS_Test(VTX_IN _in)
     //_in.vPos - 삼각형의 정점 위치
     //cbPos.xyz - Transform에서 물체가 이동한 위치
     output.vPos = float4(_in.vPos + cbPos.xyz * cbPos.w, cbPos.w);
+
+    output.vPos.xyz *= cbScale;
+
+    //output.vPos *= 5.5f;
     output.vColor = _in.vColor;
     
     return output;

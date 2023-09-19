@@ -15,7 +15,7 @@ namespace hy::graphics
 	{
 		return E_NOTIMPL;
 	}
-	void Shader::Create(const graphics::ShaderStage stage, const std::wstring& file, const std::string& funcName)
+	void Shader::Create(const graphics::eShaderStage stage, const std::wstring& file, const std::string& funcName)
 	{
 		std::filesystem::path path 
 			= std::filesystem::current_path().parent_path();

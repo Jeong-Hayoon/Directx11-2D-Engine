@@ -4,7 +4,7 @@
 namespace hy::graphics
 {
 	ConstantBuffer::ConstantBuffer()
-		:mType(CBTYPES::NONE)
+		:mType()
 	{
 
 	}
@@ -26,12 +26,12 @@ namespace hy::graphics
 		return true;
 	}
 
-	void ConstantBuffer::Bind(void* data)
+	void ConstantBuffer::SetData(void* data)
 	{
 		GetDevice()->BindConstantBuffer(buffer.Get(), data, desc.ByteWidth);
 	}
 
-	void ConstantBuffer::SetPipline(ShaderStage stage)
+	void ConstantBuffer::Bind(eShaderStage stage)
 	{
 		GetDevice()->SetConstantBuffer(stage, mType, buffer.Get());
 	}

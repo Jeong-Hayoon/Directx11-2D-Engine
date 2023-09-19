@@ -14,7 +14,7 @@ namespace hy::graphics
 		bool CreateTexture(const D3D11_TEXTURE2D_DESC desc) ;
 		bool CreateSampler();
 		
-		//bool CreateShader(const graphics::ShaderStage stage, const std::wstring& file, const std::string& funcName);
+		//bool CreateShader(const graphics::eShaderStage stage, const std::wstring& file, const std::string& funcName);
 		bool CreateInputLayout(const D3D11_INPUT_ELEMENT_DESC* pInputElementDescs, UINT NumElements
 			, const void* pShaderBytecodeWithInputSignature, SIZE_T BytecodeLength, ID3D11InputLayout** ppInputLayout);
 		bool CompileFromFile(const std::wstring& fileName, const std::string& funcName, const std::string& version, ID3DBlob** ppCode);
@@ -31,7 +31,7 @@ namespace hy::graphics
 
 		void BindViewports(D3D11_VIEWPORT* viewPort);
 		void BindConstantBuffer(ID3D11Buffer* buffer, void* data, UINT size);
-		void SetConstantBuffer(ShaderStage stage, CBTYPES type, ID3D11Buffer* buffer);
+		void SetConstantBuffer(eShaderStage stage, eCBType type, ID3D11Buffer* buffer);
 		
 
 		void Clear();
@@ -51,7 +51,6 @@ namespace hy::graphics
 		Microsoft::WRL::ComPtr<ID3D11Texture2D>			mDepthStencilBuffer;		
 		Microsoft::WRL::ComPtr<ID3D11DepthStencilView>	mDepthStencilView;
 		Microsoft::WRL::ComPtr<IDXGISwapChain>			mSwapChain;
-		Microsoft::WRL::ComPtr<ID3D11SamplerState>		mSamplers[(UINT)Filter::MAXIMUM_ANISOTROPIC];
 	};
 
 	//	- This is a helper to get access to a global device instance

@@ -21,6 +21,15 @@ namespace hy::renderer
 		Vector4 color;
 	};
 
+	CBUFFER(TransformCB, CBSLOT_TRANSFORM)
+	{
+		Vector3 pos;
+		int padd1;
+
+		Vector3 scale;
+		int padd2;
+	};
+
 	extern Mesh* mesh;
 	extern Shader* shader;
 	extern ConstantBuffer* constantBuffers[];
