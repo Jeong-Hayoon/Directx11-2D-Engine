@@ -23,6 +23,8 @@ namespace hy
 		virtual void Render() = 0;
 
 		GameObject* GetOwner() { return mOwner; }
+		void SetOwner(class GameObject* owner) { mOwner = owner; }
+
 		UINT GetUpdateOrder() { return (UINT)mType; }
 
 	private:

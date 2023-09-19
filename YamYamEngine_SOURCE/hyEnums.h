@@ -2,10 +2,14 @@
 
 namespace hy::enums
 {
-	enum LAYER
+	enum LAYERTYPE
 	{
 		NONE = 0,
-
+		Background,
+		Charactor,
+		Attack,
+		Monster,
+		UI,
 		MAX = 16,
 	};
 

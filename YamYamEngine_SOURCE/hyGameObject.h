@@ -17,7 +17,18 @@ namespace hy
 		GameObject();
 		virtual ~GameObject();
 
-		void AddComponent(Component* component);
+		//void AddComponent(Component* component);
+
+		template <typename T>
+		T* AddComponent()
+		{
+			T* comp = new T();
+			mComponents.push_back(comp);
+			comp->SetOwner(this);
+
+			return comp;
+		}
+
 		template <typename T>
 		T* GetComponent()
 		{
@@ -38,8 +49,12 @@ namespace hy
 		virtual void FixedUpdate();
 		virtual void Render();
 
+		void SetLayerType(LAYERTYPE LayerType) { mLayerType = LayerType; }
+		LAYERTYPE GetLayerType() { return mLayerType; }
+
 	private:
 		eState mState;
 		std::vector<Component*> mComponents;
+		LAYERTYPE mLayerType;
 	};
 }

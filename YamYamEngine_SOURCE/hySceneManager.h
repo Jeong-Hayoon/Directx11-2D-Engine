@@ -15,13 +15,13 @@ namespace hy
 		static void FixedUpdate();
 		static void Render();
 
-		static Scene* GetAciveScene() { return mActiveScene; }
-		static Transform* GetPosition() { return tr; }
+		static Scene* GetActiveScene() { return mActiveScene; }
+		// static Transform* GetPosition() { return tr; }
 
 	private:
 		static Scene* mActiveScene;
 		static Scene* mPlayScene;
-		static Player* player;
-		static Transform* tr;
+		// static Player* player;
+		
 	};
 }

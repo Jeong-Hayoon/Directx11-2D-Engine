@@ -35,6 +35,7 @@ namespace hy
 	void Transform::SetConstantBuffer()
 	{
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM];
+
 		Vector4 Scalepos = Vector4(mPosition.x, mPosition.y, mPosition.z, mScale.x);
 		cb->Bind(&Scalepos);
 		cb->SetPipline(graphics::ShaderStage::VS);

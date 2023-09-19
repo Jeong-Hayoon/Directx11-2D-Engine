@@ -1,6 +1,5 @@
 #pragma once
 #include "hyGameObject.h"
-#include "hyTransform.h"
 		  
 namespace hy
 {		  
@@ -16,8 +15,8 @@ namespace hy
 		virtual void Render();
 
 	private:
-		static GameObject* object;
-		 Transform* tr;
+		
+		
 	};
 }
 

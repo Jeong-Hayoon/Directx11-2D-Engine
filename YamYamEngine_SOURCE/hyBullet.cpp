@@ -6,7 +6,6 @@
 
 namespace hy
 {
-	GameObject* Bullet :: object = nullptr;
 
 
 	Bullet::Bullet()
@@ -22,7 +21,7 @@ namespace hy
 	}
 	void Bullet::Update()
 	{
-		tr = GetComponent<Transform>();
+		Transform* tr = GetComponent<Transform>();
 		Vector3 pos = tr->GetPosition();
 		pos.y += 1.f * Time::DeltaTime();
 		tr->SetPosition(pos);
@@ -35,6 +34,6 @@ namespace hy
 	}
 	void Bullet::Render()
 	{
-		GameObject::Render();
+ 		GameObject::Render();
 	}
 }

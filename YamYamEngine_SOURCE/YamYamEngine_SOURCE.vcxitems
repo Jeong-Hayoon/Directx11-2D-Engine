@@ -43,6 +43,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hyShader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hyTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hyTransform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Object.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)hyPlayer.cpp" />

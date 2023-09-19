@@ -8,7 +8,7 @@ namespace hy
 		: mState(eState::Active)
 	{
 		mComponents.resize(COMPONENTTYPE::END);
-		//AddComponent(Transform* transform);
+		AddComponent<Transform>();
 	}
 
 	GameObject::~GameObject()
@@ -16,50 +16,84 @@ namespace hy
 
 	}
 
-	void GameObject::AddComponent(Component* component)
+	/*void GameObject::AddComponent(Component* component)
 	{
 		int myOrder = component->GetUpdateOrder();
 		mComponents[myOrder] = component;
 		mComponents[myOrder]->mOwner = this;
-	}
+	}*/
+
+		
 	void GameObject::Initialize()
 	{
-		for (Component* comp : mComponents)
+		/*for (Component* comp : mComponents)
 		{
 			if (comp == nullptr)
 				continue;
 
 			comp->Initialize();
+		}*/
+
+		for (int i = 0; i < mComponents.size(); i++)
+		{
+			if (mComponents[i] == nullptr)
+				continue;
+
+			mComponents[i]->Initialize();
 		}
 	}
 	void GameObject::Update()
 	{
-		for (Component* comp : mComponents)
+		/*for (Component* comp : mComponents)
 		{
 			if (comp == nullptr)
 				continue;
 
 			comp->Update();
+		}*/
+
+		for (int i = 0; i < mComponents.size(); i++)
+		{
+			if (mComponents[i] == nullptr)
+				continue;
+
+			mComponents[i]->Update();
 		}
 	}
 	void GameObject::FixedUpdate()
 	{
-		for (Component* comp : mComponents)
+		/*for (Component* comp : mComponents)
 		{
 			if (comp == nullptr)
 				continue;
 
 			comp->FixedUpdate();
+		}*/
+
+		for (int i = 0; i < mComponents.size(); i++)
+		{
+			if (mComponents[i] == nullptr)
+				continue;
+
+			mComponents[i]->FixedUpdate();
 		}
 	}
 	void GameObject::Render()
 	{
-		for (Component* comp : mComponents)
+		/*for (Component* comp : mComponents)
 		{
 			if (comp == nullptr)
 				continue;
 
 			comp->Render();
+		}*/
+
+		for (int i = 0; i < mComponents.size(); i++)
+		{
+			if (mComponents[i] == nullptr)
+				continue;
+
+			mComponents[i]->Render();
 		}
 	}
 }

@@ -22,6 +22,6 @@ namespace hy
 		void AddGameObject(GameObject* gameObject, UINT layerIndex);
 
 	private:
-		Layer mLayers[LAYER::MAX];
+		Layer mLayers[LAYERTYPE::MAX];
 	};
 }

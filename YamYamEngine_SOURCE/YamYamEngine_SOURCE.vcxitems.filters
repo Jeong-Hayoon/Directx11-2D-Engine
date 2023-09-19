@@ -153,6 +153,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hyPlayer.h">
       <Filter>Contents\GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Object.h">
+      <Filter>Engine\Graphics\GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">

@@ -16,7 +16,6 @@ namespace hy
 		virtual void Render();
 
 	private:
-		static GameObject* object;
 		Transform* tr;
 	};
 }
