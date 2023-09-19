@@ -8,7 +8,7 @@
       <Filter>Engine\Graphics\API</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hyEntity.cpp">
-      <Filter>Engine\GameObject</Filter>
+      <Filter>Engine\Graphics\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hyInput.cpp">
       <Filter>Engine\Helpers\Input</Filter>
@@ -47,7 +47,7 @@
       <Filter>Engine\Scene</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hyGameObject.cpp">
-      <Filter>Engine\GameObject</Filter>
+      <Filter>Engine\Graphics\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hyConstantBuffer.cpp">
       <Filter>Engine\Resource\Shader</Filter>
@@ -88,7 +88,7 @@
       <Filter>Engine\Common</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)hyEntity.h">
-      <Filter>Engine\GameObject</Filter>
+      <Filter>Engine\Graphics\GameObject</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)hyInput.h">
       <Filter>Engine\Helpers\Input</Filter>
@@ -133,7 +133,7 @@
       <Filter>Engine\Scene</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)hyGameObject.h">
-      <Filter>Engine\GameObject</Filter>
+      <Filter>Engine\Graphics\GameObject</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)hyConstantBuffer.h">
       <Filter>Engine\Resource\Shader</Filter>
@@ -173,9 +173,6 @@
     <Filter Include="Engine\Helpers">
       <UniqueIdentifier>{9fdedd2a-aa63-4289-a2ce-7195e325afb0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\GameObject">
-      <UniqueIdentifier>{9439ecaf-bd1a-48b5-ac3c-db4c52e22093}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Resource">
       <UniqueIdentifier>{3d8bd53a-322f-4862-aa5d-dab0c7f11cc6}</UniqueIdentifier>
     </Filter>
@@ -211,6 +208,9 @@
     </Filter>
     <Filter Include="Contents\GameObject">
       <UniqueIdentifier>{3b2860a7-6332-471b-aa0a-55d02c10cecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\GameObject">
+      <UniqueIdentifier>{9439ecaf-bd1a-48b5-ac3c-db4c52e22093}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

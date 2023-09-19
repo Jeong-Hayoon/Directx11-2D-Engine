@@ -25,11 +25,11 @@ namespace hy
 		Transform* tr = this->GetComponent<Transform>();
 		Vector3 ScalePos = tr->GetScale();
 
-		if (Input::GetKeyDown(KEY_CODE::C))
+		if (Input::GetKey(KEY_CODE::C))
 		{
 			ScalePos.x += 1.0f * Time::DeltaTime();
 		}
-		if (Input::GetKeyDown(KEY_CODE::V))
+		if (Input::GetKey(KEY_CODE::V))
 		{
 			ScalePos.x -= 1.0f * Time::DeltaTime();
 		}

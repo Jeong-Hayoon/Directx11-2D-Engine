@@ -20,7 +20,9 @@ VTX_OUT VS_Test(VTX_IN _in)
 {
     VTX_OUT output = (VTX_OUT) 0.f;
     
-    output.vPos = float4(_in.vPos + cbPos.xyz * 2.0f, 2.f);
+    //_in.vPos - 삼각형의 정점 위치
+    //cbPos.xyz - Transform에서 물체가 이동한 위치
+    output.vPos = float4(_in.vPos + cbPos.xyz * cbPos.w, cbPos.w);
     output.vColor = _in.vColor;
     
     return output;
