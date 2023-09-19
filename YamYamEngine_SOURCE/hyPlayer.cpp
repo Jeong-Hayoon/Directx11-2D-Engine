@@ -3,6 +3,7 @@
 #include "hySceneManager.h"
 #include "hyTime.h"
 #include "hyPlayer.h"
+#include "hyInput.h"
 
 namespace hy
 {
@@ -21,7 +22,22 @@ namespace hy
 	}
 	void Player::Update()
 	{
+		Transform* tr = this->GetComponent<Transform>();
+		Vector3 ScalePos = tr->GetScale();
+
+		if (Input::GetKeyDown(KEY_CODE::C))
+		{
+			ScalePos.x += 1.0f * Time::DeltaTime();
+		}
+		if (Input::GetKeyDown(KEY_CODE::V))
+		{
+			ScalePos.x -= 1.0f * Time::DeltaTime();
+		}
+
+		tr->SetScale(ScalePos);
+
 		GameObject::Update();
+		
 	}
 	void Player::FixedUpdate()
 	{

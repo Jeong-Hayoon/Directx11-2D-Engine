@@ -88,19 +88,6 @@ namespace hy
 		
 		tr->SetPosition(pos);
 
-		Vector3 ScalePos = tr->GetScale();
-
-		if (Input::GetKeyDown(KEY_CODE::C))
-		{
-			ScalePos.x += 1.0f * Time::DeltaTime();
-		}
-		if (Input::GetKeyDown(KEY_CODE::V))
-		{
-			ScalePos.x -= 1.0f * Time::DeltaTime();
-		}
-
-		tr->SetScale(ScalePos);
-
 	}
 
 	void SceneManager::FixedUpdate()
