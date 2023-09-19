@@ -34,11 +34,11 @@ namespace hy
 
 	void Transform::SetConstantBuffer()
 	{
-		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM];
+		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::TRANSFORM];
 
 		Vector4 Scalepos = Vector4(mPosition.x, mPosition.y, mPosition.z, mScale.x);
-		cb->Bind(&Scalepos);
-		cb->SetPipline(graphics::ShaderStage::VS);
+		cb->SetData(&Scalepos);
+		cb->Bind(graphics::eShaderStage::VS);
 	}
 
 }

@@ -24,13 +24,13 @@ namespace hy::graphics
 		std::wstring shaderPath(path);
 		shaderPath += file;
 
-		if (stage == graphics::ShaderStage::VS)
+		if (stage == graphics::eShaderStage::VS)
 		{
 			graphics::GetDevice()->CompileFromFile(file, funcName, "vs_5_0", mVSBlob.GetAddressOf());
 			graphics::GetDevice()->CreateVertexShader(mVSBlob->GetBufferPointer(), mVSBlob->GetBufferSize(), mVS.GetAddressOf());
 		}
 		
-		if (stage == graphics::ShaderStage::PS)
+		if (stage == graphics::eShaderStage::PS)
 		{
 			graphics::GetDevice()->CompileFromFile(file, funcName, "ps_5_0", mPSBlob.GetAddressOf());
 			graphics::GetDevice()->CreatePixelShader(mPSBlob->GetBufferPointer(), mPSBlob->GetBufferSize(), mPS.GetAddressOf());

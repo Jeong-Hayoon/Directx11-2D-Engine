@@ -47,8 +47,8 @@ namespace hy::renderer
 		Resources::Insert(L"TriangleMesh", mesh);
 		
 
-		constantBuffers[(UINT)graphics::eCBType::Transform] = new ConstantBuffer();
-		constantBuffers[(UINT)graphics::eCBType::Transform]->Create(sizeof(TransformCB));
+		constantBuffers[(UINT)graphics::eCBType::TRANSFORM] = new ConstantBuffer();
+		constantBuffers[(UINT)graphics::eCBType::TRANSFORM]->Create(sizeof(TransformCB));
 		//mesh->CreateConstantBuffer(nullptr, sizeof(Vector4));
 	}
 
@@ -95,7 +95,7 @@ namespace hy::renderer
 		delete mesh;
 		delete shader;
 
-		delete constantBuffers[(UINT)graphics::eCBType::Transform];
+		delete constantBuffers[(UINT)graphics::eCBType::TRANSFORM];
 		//triangleVertexBuffer->Release();
 		//errorBlob->Release();
 		//triangleVSBlob->Release();

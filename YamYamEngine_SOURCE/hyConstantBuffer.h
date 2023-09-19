@@ -15,6 +15,6 @@ namespace hy::graphics
 		void Bind(eShaderStage stage);
 
 	private:
-		const eCBtype mType;
+		const eCBType mType;
 	};
 }
