@@ -4,6 +4,7 @@
 #include <cmath>
 #include <algorithm>
 #include <limits>
+#define NOMINMAX
 #include <Windows.h>
 
 
@@ -28,6 +29,20 @@ namespace hy::math
     struct Matrix;
     struct Quaternion;
     struct Plane;
+
+    // radian <-> degree
+    inline float Radian(const float degree)
+    {
+        return degree * XM_PI / 180.0f;
+    }
+
+    inline float Degree(const float radian)
+    {
+        return radian * 180.0f / XM_PI;
+    }
+
+    //template<class T> inline T XMMin(T a, T b) noexcept { return (a < b) ? a : b; }
+    //template<class T> inline T XMMax(T a, T b) noexcept { return (a > b) ? a : b; }
 
     //------------------------------------------------------------------------------
     // 2D rectangle
@@ -568,13 +583,27 @@ namespace hy::math
 
         static Matrix CreateFromAxisAngle(const Vector3& axis, float angle) noexcept;
 
+        static Matrix CreatePerspectiveFieldOfViewRH(float fov, float aspectRatio, float nearPlane, float farPlane) noexcept;
+        static Matrix CreatePerspectiveRH(float width, float height, float nearPlane, float farPlane) noexcept;
+        static Matrix CreatePerspectiveFieldOfViewLH(float fov, float aspectRatio, float nearPlane, float farPlane) noexcept;
+        static Matrix CreatePerspectiveLH(float width, float height, float nearPlane, float farPlane) noexcept;
+
         static Matrix CreatePerspectiveFieldOfView(float fov, float aspectRatio, float nearPlane, float farPlane) noexcept;
         static Matrix CreatePerspective(float width, float height, float nearPlane, float farPlane) noexcept;
         static Matrix CreatePerspectiveOffCenter(float left, float right, float bottom, float top, float nearPlane, float farPlane) noexcept;
+        static Matrix CreateOrthographicRH(float width, float height, float zNearPlane, float zFarPlane) noexcept;
+        static Matrix CreateOrthographicOffCenterRH(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane) noexcept;
+        static Matrix CreateOrthographicLH(float width, float height, float zNearPlane, float zFarPlane) noexcept;
+        static Matrix CreateOrthographicOffCenterLH(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane) noexcept;
+
+        static Matrix CreateLookAtRH(const Vector3& position, const Vector3& target, const Vector3& up) noexcept;
+        static Matrix CreateLookAtLH(const Vector3& position, const Vector3& target, const Vector3& up) noexcept;
+        static Matrix CreateLookToRH(const Vector3& position, const Vector3& target, const Vector3& up) noexcept;
+        static Matrix CreateLookToLH(const Vector3& position, const Vector3& target, const Vector3& up) noexcept;
         static Matrix CreateOrthographic(float width, float height, float zNearPlane, float zFarPlane) noexcept;
         static Matrix CreateOrthographicOffCenter(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane) noexcept;
 
-        static Matrix CreateLookAt(const Vector3& position, const Vector3& target, const Vector3& up) noexcept;
+        // static Matrix CreateLookAt(const Vector3& position, const Vector3& target, const Vector3& up) noexcept;
         static Matrix CreateWorld(const Vector3& position, const Vector3& forward, const Vector3& up) noexcept;
 
         static Matrix CreateFromQuaternion(const Quaternion& quat) noexcept;
@@ -977,5 +1006,5 @@ namespace hy::math
         static RECT __cdecl ComputeTitleSafeArea(UINT backBufferWidth, UINT backBufferHeight) noexcept;
     };
 
-    #include "hyMath.inl"
+    // #include "hyMath.inl"
 } 

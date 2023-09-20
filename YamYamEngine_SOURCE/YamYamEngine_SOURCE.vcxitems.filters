@@ -216,9 +216,4 @@
       <UniqueIdentifier>{9439ecaf-bd1a-48b5-ac3c-db4c52e22093}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)hyMath.inl">
-      <Filter>Engine\Helpers\Mathatics</Filter>
-    </None>
-  </ItemGroup>
 </Project>

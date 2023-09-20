@@ -69,7 +69,4 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hyTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hyTransform.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)hyMath.inl" />
-  </ItemGroup>
 </Project>

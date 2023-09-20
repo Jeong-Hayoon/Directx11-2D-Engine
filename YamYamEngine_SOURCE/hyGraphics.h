@@ -34,7 +34,7 @@ namespace hy::graphics
 	// constant buffers
 	enum class eCBType
 	{
-		TRANSFORM,
+		Transform,
 		Test,
 		END,
 	};

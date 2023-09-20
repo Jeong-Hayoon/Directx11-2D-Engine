@@ -90,7 +90,7 @@ namespace hy::graphics
     }
 
     GraphicsDevice_DX11::~GraphicsDevice_DX11()
-    {
+    {   
 
     }
 
@@ -367,12 +367,12 @@ namespace hy::graphics
     void GraphicsDevice_DX11::Render()
     {
         //set costant buffer 
-        renderer::constantBuffers[(UINT)graphics::eCBType::TRANSFORM]->Bind(eShaderStage::VS);
+        renderer::constantBuffers[(UINT)graphics::eCBType::Transform]->Bind(eShaderStage::VS);
 
         //// Input Assembeler 단계에 버텍스버퍼 정보 지정
         renderer::mesh->BindBuffer();
         Vector4 pos(0.0f, 0.0f, 0.0f, 0.0f);
-        renderer::constantBuffers[(UINT)graphics::eCBType::TRANSFORM]->SetData(&pos);
+        renderer::constantBuffers[(UINT)graphics::eCBType::Transform]->SetData(&pos);
 
         // Set Inputlayout, shader
         renderer::shader->Update();
