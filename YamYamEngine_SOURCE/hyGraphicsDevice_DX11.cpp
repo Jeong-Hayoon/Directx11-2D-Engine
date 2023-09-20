@@ -218,10 +218,14 @@ namespace hy::graphics
         std::wstring filePath(path.c_str());
         filePath += fileName;
 
+        UINT flag = D3DCOMPILE_ENABLE_STRICTNESS;
+        flag |= D3DCOMPILE_DEBUG;
+        flag |= D3DCOMPILE_SKIP_OPTIMIZATION;
+
         ID3DBlob* errorBlob = nullptr;
         if (FAILED(D3DCompileFromFile(filePath.c_str(), nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE
             , funcName.c_str(), version.c_str()
-            , 0, 0, ppCode, &errorBlob)))
+            , flag, 0, ppCode, &errorBlob)))
             return false;
 
         return true;
