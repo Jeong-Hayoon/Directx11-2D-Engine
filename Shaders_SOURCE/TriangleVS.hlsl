@@ -25,9 +25,9 @@ VTX_OUT VS_Test(VTX_IN _in)
     
     //_in.vPos - 삼각형의 정점 위치
     //cbPos.xyz - Transform에서 물체가 이동한 위치
-    output.vPos = float4(_in.vPos + cbPos.xyz * cbPos.w, cbPos.w);
+    output.vPos = float4(_in.vPos + cbPos.xyz * cbScale.x, cbScale.x);
 
-    output.vPos.xyz *= cbScale;
+    //output.vPos.xyz *= cbScale;
 
     //output.vPos *= 5.5f;
     output.vColor = _in.vColor;

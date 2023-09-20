@@ -40,12 +40,12 @@ namespace hy
 		cb->SetData(&Scalepos);
 		cb->Bind(graphics::eShaderStage::VS);
 
-		/*renderer::TransformCB data = {};
+		renderer::TransformCB data = {};
 		data.pos = mPosition;
 		data.scale = mScale;
 		cb->SetData(&data);
 
-		cb->Bind(graphics::eShaderStage::VS);*/
+		cb->Bind(graphics::eShaderStage::VS);
 	}
 
 }

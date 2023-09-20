@@ -28,6 +28,7 @@ namespace hy::graphics
 		{
 			graphics::GetDevice()->CompileFromFile(file, funcName, "vs_5_0", mVSBlob.GetAddressOf());
 			graphics::GetDevice()->CreateVertexShader(mVSBlob->GetBufferPointer(), mVSBlob->GetBufferSize(), mVS.GetAddressOf());
+
 		}
 		
 		if (stage == graphics::eShaderStage::PS)

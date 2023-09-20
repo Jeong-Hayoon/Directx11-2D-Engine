@@ -25,6 +25,7 @@ namespace hy
 		{
 			Player* player = object::Instantiate<Player>(LAYERTYPE::Charactor);
 			player->GetComponent<Transform>()->SetScale(Vector3(0.5f, 0.5f, 0.5f));
+			//player->GetComponent<Transform>()->SetScale(Vector3(2.0f, 2.0f, 2.0f));
 
 			MeshRenderer* meshRenderer = player->AddComponent<MeshRenderer>();
 			meshRenderer->SetMesh(Resources::Find<Mesh>(L"TriangleMesh"));
